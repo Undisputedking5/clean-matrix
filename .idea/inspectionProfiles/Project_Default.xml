@@ -1,0 +1,58 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="asgiref" />
+          <option value="blinker" />
+          <option value="category" />
+          <option value="certifi" />
+          <option value="cffi" />
+          <option value="charset-normalizer" />
+          <option value="click" />
+          <option value="cryptography" />
+          <option value="dateparser" />
+          <option value="dj-database-url" />
+          <option value="Django" />
+          <option value="django-daraja" />
+          <option value="dnspython" />
+          <option value="docutils" />
+          <option value="idna" />
+          <option value="itsdangerous" />
+          <option value="Jinja2" />
+          <option value="lockfile" />
+          <option value="Markdown" />
+          <option value="MarkupSafe" />
+          <option value="mock" />
+          <option value="note" />
+          <option value="numpy" />
+          <option value="pillow" />
+          <option value="psycopg2-binary" />
+          <option value="pycparser" />
+          <option value="pymongo" />
+          <option value="python-daemon" />
+          <option value="python-dateutil" />
+          <option value="python-decouple" />
+          <option value="python-dotenv" />
+          <option value="pytz" />
+          <option value="pyzmq" />
+          <option value="regex" />
+          <option value="requests" />
+          <option value="six" />
+          <option value="sqlparse" />
+          <option value="tornado" />
+          <option value="tzlocal" />
+          <option value="urllib3" />
+          <option value="whitenoise" />
+          <option value="cloudinary" />
+          <option value="django-cloudinary-storage" />
+          <option value="boto3" />
+          <option value="botocore" />
+          <option value="django-storages" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
