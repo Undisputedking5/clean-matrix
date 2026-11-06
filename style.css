@@ -722,6 +722,109 @@ h2 {
   color: var(--lime);
 }
 
+/* ============================================
+   Events page
+   ============================================ */
+.events {
+  padding: 6rem 0;
+}
+
+.events-header {
+  max-width: 640px;
+  margin-bottom: 3rem;
+}
+
+.events-header p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.events-table-wrap {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(15, 61, 46, 0.06);
+}
+
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.events-table th {
+  background: var(--green-deep);
+  color: var(--lime);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 1.1rem 1.5rem;
+}
+
+.events-table td {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+  color: var(--muted);
+}
+
+/* Event name stands out */
+.events-table td:first-child {
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--green-deep);
+}
+
+.events-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.events-table tbody tr:hover {
+  background: rgba(182, 242, 58, 0.15);
+}
+
+.event-date {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  color: var(--green-deep);
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+}
+
+.events-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding: 2rem 2.5rem;
+  background: var(--green);
+  color: #fff;
+  border-radius: 16px;
+}
+
+.events-cta p {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.events-cta .cta-button {
+  background: var(--lime);
+  color: var(--green-deep);
+}
+
+.events-cta .cta-button:hover {
+  background: #fff;
+}
+
 /*
    Responsive
   */
@@ -798,6 +901,65 @@ h2 {
   .values-list li {
     grid-template-columns: 1fr;
     gap: 0.25rem;
+  }
+
+  /* Events: each row becomes a card */
+  .events {
+    padding: 4rem 0;
+  }
+
+  .events-table-wrap {
+    background: none;
+    border: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .events-table thead {
+    display: none;
+  }
+
+  .events-table,
+  .events-table tbody,
+  .events-table tr,
+  .events-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .events-table tr {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .events-table td {
+    border: 0;
+    padding: 0.35rem 0;
+  }
+
+  .events-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+
+  .events-table td:first-child {
+    font-size: 1.1rem;
+  }
+
+  .events-table td:first-child::before {
+    display: none;
+  }
+
+  .events-cta {
+    padding: 1.75rem;
   }
 }
 
