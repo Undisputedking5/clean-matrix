@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Volunteer | Clean-Matrix</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!--Navigation bar-->
+<nav class="navbar">
+    <div class="nav-logo">
+        Clean-Matrix
+    </div>
+    <ul>
+        <li>
+            <a href="home.html">Home</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li>
+            <a href="events.html">Events</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+        <li>
+            <a href="volunteer.html" class="btn-link" aria-current="page">Volunteer</a>
+        </li>
+    </ul>
+</nav>
+
+<!--Volunteer section-->
+<section class="volunteer">
+    <div class="section-inner volunteer-grid">
+        <div class="volunteer-copy">
+            <span class="section-label">Volunteer</span>
+            <h2>Join us and make a <span class="hero-highlight">difference</span></h2>
+            <p>Pick an event, leave your details and we'll get in touch with everything you need to know before the day.</p>
+            <ul class="volunteer-perks">
+                <li>Meet people who care about the environment</li>
+                <li>Learn practical conservation skills</li>
+                <li>Help keep our communities clean and green</li>
+            </ul>
+            <p>Not sure which event suits you? <a href="events.html">See all events</a>.</p>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="event">Event</label>
+                <select id="event" name="event" required>
+                    <option value="" disabled selected>Choose an event</option>
+                    <option value="TREE PLANTING">Tree Planting</option>
+                    <option value="CLIMATE TALK">Climate Talk</option>
+                    <option value="BONDING HIKE">Bonding Hike</option>
+                    <option value="PLASTIC COLLECTION CHALLENGE">Plastic Collection Challenge</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Phone number</label>
+                <input type="tel" id="number" name="number" placeholder="07XX XXX XXX" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Choose one</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <button type="submit">Sign me up</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

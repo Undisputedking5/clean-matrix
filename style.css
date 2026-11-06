@@ -152,6 +152,12 @@ nav a[aria-current="page"] {
   font-weight: 700;
 }
 
+/* Volunteer button is already green, so keep its text readable */
+nav a.btn-link[aria-current="page"] {
+  color: var(--lime);
+  background: var(--green-deep);
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -723,6 +729,122 @@ h2 {
 }
 
 /* ============================================
+   Volunteer page
+   (form fields reuse the Contact form styles)
+   ============================================ */
+.volunteer {
+  padding: 6rem 0;
+}
+
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.volunteer-copy p {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.volunteer-copy a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.volunteer-copy a:hover {
+  color: var(--green-deep);
+  border-color: currentColor;
+}
+
+.volunteer-perks {
+  list-style: none;
+  margin: 1.5rem 0 2rem;
+  padding: 0;
+}
+
+.volunteer-perks li {
+  position: relative;
+  padding: 0.6rem 0 0.6rem 2.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.volunteer-perks li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--green-deep);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.volunteer form {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 14px 30px rgba(15, 61, 46, 0.06);
+}
+
+/* Dropdowns match the text inputs, with a custom arrow */
+.form-group select {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--ink);
+  background-color: var(--cream);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231f8a4c' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.85rem 2.5rem 0.85rem 1rem;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.form-group select:focus {
+  outline: none;
+  background-color: #fff;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(31, 138, 76, 0.18);
+}
+
+.volunteer form button[type="submit"] {
+  width: 100%;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  background: var(--lime);
+  border: 2px solid var(--lime);
+  border-radius: 8px;
+  padding: 0.9rem 1.6rem;
+  cursor: pointer;
+  transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.volunteer form button[type="submit"]:hover {
+  background: var(--green-deep);
+  border-color: var(--green-deep);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ============================================
    Events page
    ============================================ */
 .events {
@@ -854,12 +976,18 @@ h2 {
   .hero-inner,
   .story-grid,
   .mission-grid,
-  .contact-grid {
+  .contact-grid,
+  .volunteer-grid {
     grid-template-columns: 1fr;
   }
 
-  .contact form {
+  .contact form,
+  .volunteer form {
     padding: 1.75rem;
+  }
+
+  .volunteer {
+    padding: 4rem 0;
   }
 
   .hero-stamp {
