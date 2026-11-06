@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery | Clean-Matrix</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!--Navigation bar-->
+<nav class="navbar">
+    <div class="nav-logo">
+        Clean-Matrix
+    </div>
+    <ul>
+        <li>
+            <a href="home.html">Home</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li>
+            <a href="events.html">Events</a>
+        </li>
+        <li>
+            <a href="gallery.html" aria-current="page">Gallery</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+        <li>
+            <a href="volunteer.html" class="btn-link">Volunteer</a>
+        </li>
+    </ul>
+</nav>
+
+<!--Gallery-->
+<section class="gallery">
+    <div class="section-inner">
+        <div class="gallery-header">
+            <span class="section-label">Gallery</span>
+            <h2>Moments from the <span class="hero-highlight">field</span></h2>
+            <p>Snapshots from our clean-ups, events and the people who show up for them. Click any photo to see it larger.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <button class="gallery-item" type="button"><img src="images/20261006_143838.jpg" alt="Clean-Matrix photo 1" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/20261006_143845.jpg" alt="Clean-Matrix photo 2" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/20261006_143848.jpg" alt="Clean-Matrix photo 3" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/20261006_143850.jpg" alt="Clean-Matrix photo 4" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0088.jpg" alt="Clean-Matrix photo 5" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0089.jpg" alt="Clean-Matrix photo 6" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0092.jpg" alt="Clean-Matrix photo 7" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0093.jpg" alt="Clean-Matrix photo 8" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0095.jpg" alt="Clean-Matrix photo 9" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0100.jpg" alt="Clean-Matrix photo 10" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0102.jpg" alt="Clean-Matrix photo 11" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0103(1).jpg" alt="Clean-Matrix photo 12" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0103.jpg" alt="Clean-Matrix photo 13" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0105.jpg" alt="Clean-Matrix photo 14" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0111.jpg" alt="Clean-Matrix photo 15" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0118.jpg" alt="Clean-Matrix photo 16" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0132.jpg" alt="Clean-Matrix photo 17" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0135.jpg" alt="Clean-Matrix photo 18" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0137.jpg" alt="Clean-Matrix photo 19" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0138.jpg" alt="Clean-Matrix photo 20" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0139.jpg" alt="Clean-Matrix photo 21" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0141.jpg" alt="Clean-Matrix photo 22" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0142.jpg" alt="Clean-Matrix photo 23" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0143.jpg" alt="Clean-Matrix photo 24" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0144.jpg" alt="Clean-Matrix photo 25" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0146.jpg" alt="Clean-Matrix photo 26" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0147.jpg" alt="Clean-Matrix photo 27" loading="lazy"></button>
+            <button class="gallery-item" type="button"><img src="images/IMG-20261006-WA0149.jpg" alt="Clean-Matrix photo 28" loading="lazy"></button>
+        </div>
+    </div>
+</section>
+
+<!--Lightbox (shown when a photo is clicked)-->
+<div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-btn lightbox-close" type="button" aria-label="Close">&times;</button>
+    <button class="lightbox-btn lightbox-prev" type="button" aria-label="Previous photo">&#8249;</button>
+    <img class="lightbox-img" src="" alt="">
+    <button class="lightbox-btn lightbox-next" type="button" aria-label="Next photo">&#8250;</button>
+    <span class="lightbox-count"></span>
+</div>
+
+<script>
+    const items = [...document.querySelectorAll('.gallery-item img')];
+    const box = document.getElementById('lightbox');
+    const boxImg = box.querySelector('.lightbox-img');
+    const count = box.querySelector('.lightbox-count');
+    let current = 0;
+
+    function show(i) {
+        current = (i + items.length) % items.length;
+        boxImg.src = items[current].src;
+        boxImg.alt = items[current].alt;
+        count.textContent = (current + 1) + ' / ' + items.length;
+    }
+
+    function open(i) {
+        show(i);
+        box.hidden = false;
+        document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+        box.hidden = true;
+        document.body.style.overflow = '';
+    }
+
+    items.forEach((img, i) => img.parentElement.addEventListener('click', () => open(i)));
+    box.querySelector('.lightbox-close').addEventListener('click', close);
+    box.querySelector('.lightbox-prev').addEventListener('click', () => show(current - 1));
+    box.querySelector('.lightbox-next').addEventListener('click', () => show(current + 1));
+    box.addEventListener('click', e => { if (e.target === box) close(); });
+
+    document.addEventListener('keydown', e => {
+        if (box.hidden) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') show(current - 1);
+        if (e.key === 'ArrowRight') show(current + 1);
+    });
+</script>
+</body>
+</html>
