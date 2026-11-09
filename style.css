@@ -498,6 +498,92 @@ nav a.btn-link[aria-current="page"] {
   font-size: 1.05rem;
 }
 
+/* About: gallery preview */
+.about-gallery {
+  padding: 0 0 6rem;
+}
+
+.about-gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.about-gallery-header h2 {
+  margin: 0;
+}
+
+.about-gallery-link {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  text-decoration: none;
+  padding: 0.8rem 1.4rem;
+  border: 2px solid var(--green-deep);
+  border-radius: 8px;
+  transition: background-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.about-gallery-link:hover {
+  background: var(--green-deep);
+  color: var(--lime);
+  transform: translateY(-2px);
+}
+
+/* One big photo on the left, four small ones on the right */
+.about-gallery-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 220px);
+  gap: 1rem;
+}
+
+.about-gallery-item {
+  position: relative;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.about-gallery-item-large {
+  grid-row: span 2;
+}
+
+.about-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Green tint fades in on hover */
+.about-gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 61, 46, 0.6), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.about-gallery-item:hover::after {
+  opacity: 1;
+}
+
+.about-gallery-item:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+}
+
 .about-cta {
   background: var(--green);
   color: #fff;
@@ -1030,6 +1116,20 @@ form button[type="submit"]:hover {
   .values-list li {
     grid-template-columns: 1fr;
     gap: 0.25rem;
+  }
+
+  .about-gallery {
+    padding-bottom: 4rem;
+  }
+
+  .about-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 240px repeat(2, 150px);
+  }
+
+  .about-gallery-item-large {
+    grid-column: span 2;
+    grid-row: auto;
   }
 
   .lightbox {
