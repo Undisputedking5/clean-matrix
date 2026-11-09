@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Volunteer | Clean-Matrix</title>
+    <title>Services | Clean-Matrix</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 <!--Navigation bar-->
@@ -31,30 +30,72 @@
         </li>
         <li>
             <a href="services.html" aria-current="page">Services</a>
+        </li>
+        <li>
+            <a href="testimonials.html">Testimonials</a>
+        </li>
     </ul>
 </nav>
 
-    <section class = "Services">
-        <div class="section-inner services-grid">
-            <div class="services-copy">
-                <span class="section-label">OUR SERVICES</span>
-                <h2>Join the movement for a <span class="hero-highlight">cleaner</span> future</h2>
-                <p>At Clean-Matrix, we believe that protecting the environment starts with practical action.We work with schools,communities and individuals to build skills,reduce waste,restore green spaces,and promote sustainable living</p>
-            </div>
-             <ul class="volunteer-perks">
-                <li>Environmental training and workshops: hands on sessions on conservation techniques</li>
-                <li>Holiday eco-camps: paid camps where children learn gardening,recycling and nature care</li>
-                <li>Rainwater harvesting installation: tanks and gutters for homes and schools</li>
-                <li>Online eco-learning hub: short courses and downloadable guides,sold individually or by subscription</li>
-                <li>Organic fertilizer and compost sales: made from the waste you collect</li>
-            </ul>
-            <p>Why choose our services? <a href="about.html">See about us</a>.</p>
+<!--Services intro and cards-->
+<section class="services">
+    <div class="section-inner">
+        <div class="services-header">
+            <span class="section-label">Our Services</span>
+            <h2>Join the movement for a <span class="hero-highlight">cleaner</span> future</h2>
+            <p>At Clean-Matrix, we believe that protecting the environment starts with practical action. We work with schools, communities and individuals to build skills, reduce waste, restore green spaces and promote sustainable living.</p>
         </div>
-            <p1>Ready to make a difference? <a href="contact.html">Get in touch today and lets build a greener future together</a>.</p1>
-            <form>
-                <div class="form-group">
-                <label for="Full name">Full Name</label>
-                <input type="text" id="Full name" name="name" placeholder="Your full name" required>
+
+        <div class="services-grid">
+            <article class="service-card">
+                <span class="service-num">01</span>
+                <h3>Environmental Training &amp; Workshops</h3>
+                <p>Hands-on sessions on conservation techniques for schools, groups and organisations.</p>
+            </article>
+            <article class="service-card">
+                <span class="service-num">02</span>
+                <h3>Holiday Eco-Camps</h3>
+                <p>Paid camps where children learn gardening, recycling and nature care.</p>
+            </article>
+            <article class="service-card">
+                <span class="service-num">03</span>
+                <h3>Rainwater Harvesting</h3>
+                <p>Installation of tanks and gutters for homes and schools.</p>
+            </article>
+            <article class="service-card">
+                <span class="service-num">04</span>
+                <h3>Online Eco-Learning Hub</h3>
+                <p>Short courses and downloadable guides, sold individually or by subscription.</p>
+            </article>
+            <article class="service-card">
+                <span class="service-num">05</span>
+                <h3>Organic Fertilizer &amp; Compost</h3>
+                <p>Quality compost and fertilizer made from the waste we collect.</p>
+            </article>
+            <article class="service-card service-card-cta">
+                <h3>Why choose us?</h3>
+                <p>Learn about our story, mission and the communities we work with.</p>
+                <a href="about.html" class="service-link">See about us &rarr;</a>
+                <a href="testimonials.html" class="service-link">Read testimonials &rarr;</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!--Service registration-->
+<section class="service-register">
+    <div class="section-inner service-register-grid">
+        <div class="service-register-copy">
+            <span class="section-label section-label-light">Register</span>
+            <h2>Ready to make a <span class="hero-highlight">difference</span>?</h2>
+            <p>Pick a service and leave your details. We'll get back to you with pricing, dates and everything you need to get started.</p>
+            <p>Have a question first? <a href="contact.html">Get in touch</a> and let's build a greener future together.</p>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="full-name">Full name</label>
+                <input type="text" id="full-name" name="name" placeholder="Your full name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
@@ -63,20 +104,25 @@
             <div class="form-group">
                 <label for="number">Phone number</label>
                 <input type="tel" id="number" name="number" placeholder="07XX XXX XXX" required>
+            </div>
             <div class="form-group">
-                <label for="service">service</label>
+                <label for="service">Service</label>
                 <select id="service" name="service" required>
-                    <option value="" disabled selected>Pick Your service</option>
-                    <option value="Environmental training and workshops: hands on sessions on conservation techniques">Environmental Training</option>
-                    <option value="Holiday eco-camps: paid camps where children learn gardening,recycling and nature care">Holiday Eco-Camps</option>
-                    <option value="Rainwater harvesting installation: tanks and gutters for homes and schools">Rainwater Harvesting</option>
-                    <option value="Online eco-learning hub: short courses and downloadable guides,sold individually or by subscription">Online Eco-Learning</option>
-                    <option value="Organic fertilizer and compost sales: made from the waste you collect">Organic Fertilizer</option>
+                    <option value="" disabled selected>Pick your service</option>
+                    <option value="Environmental Training">Environmental Training &amp; Workshops</option>
+                    <option value="Holiday Eco-Camps">Holiday Eco-Camps</option>
+                    <option value="Rainwater Harvesting">Rainwater Harvesting</option>
+                    <option value="Online Eco-Learning">Online Eco-Learning Hub</option>
+                    <option value="Organic Fertilizer">Organic Fertilizer &amp; Compost</option>
                 </select>
             </div>
             <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" cols="25" required></textarea>
-                </div>
-                <button type="submit">Register for Service</button>
-            </form>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about what you need" required></textarea>
+            </div>
+            <button type="submit">Register for service</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>
